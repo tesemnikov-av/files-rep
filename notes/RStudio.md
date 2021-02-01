@@ -11,6 +11,13 @@ https://r-analytics.blogspot.com/p/blog-page_06.html
 | rm(list=ls())  |clear variables   |   |   |   |
 |  cat("\014") | clear console  |   |   |   |
 |  cat("\f") | clear console  |   |   |   |
+|   vector    |  b <- c(-45 , 4, 0, 11)    |   |   |   |
+|     df  | df <- data.frame(rost=a, ves=b)     |   |   |   |
+|       |      |   |   |   |
+|       |      |   |   |   |
+|       |      |   |   |   |
+
+
 
 
 Справка
@@ -46,8 +53,8 @@ dir()
 
 a <- 5:30
 
-b <- c(-45 , 4, 0, 11)
-df <- data.frame(rost=a, ves=b)
+
+
 
 
 b[1]
