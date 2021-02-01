@@ -47,6 +47,8 @@ dir()
 a <- 5:30
 
 b <- c(-45 , 4, 0, 11)
+df <- data.frame(rost=a, ves=b)
+
 
 b[1]
 
