@@ -13,8 +13,8 @@ https://r-analytics.blogspot.com/p/blog-page_06.html
 |  cat("\f") | clear console  |   |   |   |
 |   vector    |  b <- c(-45 , 4, 0, 11)    |   |   |   |
 |     df  | df <- data.frame(rost=a, ves=b)     |   |   |   |
-|       |      |   |   |   |
-|       |      |   |   |   |
+|    range   |  a <- 5:30    |   |   |   |
+|   index, raw, column    |  df[2,1]    |   |   |   |
 |       |      |   |   |   |
 
 
@@ -51,7 +51,7 @@ dir()
  mydata <- read.csv('data.csv')
  write.csv(df , "evals.csv")
 
-a <- 5:30
+
 
 
 
