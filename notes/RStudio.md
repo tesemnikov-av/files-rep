@@ -27,7 +27,7 @@ cat("\014")
 
 subset(mydata, gender == 'female')
 
-
+mean(a, na.rm=TRUE)
 
 rbind cbind 
 
