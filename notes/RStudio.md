@@ -15,7 +15,7 @@ https://r-analytics.blogspot.com/p/blog-page_06.html
 |     df  | df <- data.frame(rost=a, ves=b)     |   |   |   |
 |    range   |  a <- 5:30    |   |   |   |
 |   index, raw, column    |  df[2,1]    |   |   |   |
-|       |      |   |   |   |
+|   index elem  num 2   |   my_list[[2]]   |   |   |   |
 
 
 
