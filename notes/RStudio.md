@@ -16,8 +16,18 @@ https://r-analytics.blogspot.com/p/blog-page_06.html
 |    range   |  a <- 5:30    |   |   |   |
 |   index, raw, column    |  df[2,1]    |   |   |   |
 |   index elem  num 2   |   my_list[[2]]   |   |   |   |
-| hist| qplot(data=df2, dist)| |||
-
+| hist| qplot(data=df2, dist, xlab='Растояние тормозного пути(м)',ylab='Количество машин (шт)', main='Данные за 1920-е годы')| |||
+| scatter plot   |  qplot(data=df2, dist, speed) |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+| | coef(model) |   |   |   |
+| | fitted(model) |   |   |   |
+| | residuals(model) |   |   |   |
 
 
 
