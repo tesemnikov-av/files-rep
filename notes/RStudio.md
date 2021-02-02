@@ -25,9 +25,9 @@ https://r-analytics.blogspot.com/p/blog-page_06.html
 |   |   |   |   |   |
 |   |   |   |   |   |
 |   |   |   |   |   |
-| | coef(model) |   |   |   |
-| | fitted(model) |   |   |   |
-| | residuals(model) |   |   |   |
+| lm (МНК) | coef(model) |   |   |   |
+| lm (МНК) | fitted(model) |   |   |   |
+| lm (МНК) | residuals(model) |   |   |   |
 
 
 
