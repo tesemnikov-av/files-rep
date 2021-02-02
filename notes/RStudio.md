@@ -16,6 +16,7 @@ https://r-analytics.blogspot.com/p/blog-page_06.html
 |    range   |  a <- 5:30    |   |   |   |
 |   index, raw, column    |  df[2,1]    |   |   |   |
 |   index elem  num 2   |   my_list[[2]]   |   |   |   |
+| hist| qplot(data=df2, dist)| |||
 
 
 
