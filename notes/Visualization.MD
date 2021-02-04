@@ -113,6 +113,12 @@ plt.show()
 ```
 ![correlation map](https://github.com/tesemnikov-av/files-rep/blob/master/data_corr.png)
 
+```python
+data[real_features].corr().style.background_gradient(cmap='coolwarm').set_precision(3)
+```
+
+![correlation map](https://github.com/tesemnikov-av/files-rep/blob/master/corr2.png)
+
 
 ```python
 # Set the style of plots
