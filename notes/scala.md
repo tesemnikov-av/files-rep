@@ -12,3 +12,6 @@ println(s"$name is last name $surname")
 def my_mean(a: Array[Int]): Float = {
     a.sum / a.size.toFloat
 }
+
+sort 
+aSet.sortWith(_ < _)
