@@ -15,3 +15,9 @@ def my_mean(a: Array[Int]): Float = {
 
 sort 
 aSet.sortWith(_ < _)
+
+
+EXAMPLE:
+https://spark.apache.org/docs/latest/mllib-linear-methods.html#classification
+https://github.com/apache/spark/blob/master/data/mllib/sample_libsvm_data.txt
+https://github.com/apache/spark/blob/master/data/mllib/sample_multiclass_classification_data.txt
