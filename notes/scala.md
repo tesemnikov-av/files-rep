@@ -40,3 +40,17 @@ scala> ds.show()
 |  6|  7|  8|
 |  9| 19| 10|
 +---+---+---+
+
+```scala
+val rawData = sc.textFile("/Users/tesemnikov-av/Downloads/heart.csv")
+
+val header = rawData.first
+val rawData2 = rawData.filter(line => line != header)
+
+val data = rawData.map { line =>
+val values = line.split(',').map(_.toDouble)
+val featureVector = Vectors.dense(values.init)
+val label = values.last - 1
+LabeledPoint(label, featureVector)
+}
+```
