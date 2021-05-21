@@ -7,7 +7,7 @@ scala> :h?   # history
 ```python
 import org.apache.spark.mllib.evaluation.MulticlassMetrics
 import org.apache.spark.mllib.tree.DecisionTree
-import org.apache.spark.mllib.linalg.Vector
+import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.regression.LabeledPoint
 
 # load data
