@@ -31,6 +31,11 @@ LabeledPoint(label, featureVector)
 # train test val split
 val Array(trainData, cvData, testData) = data.randomSplit(Array(0.8, 0.1, 0.1))
 
+# cache
+trainData.cache()
+cvData.cache()
+testData.cache()
+
 # create model
 val model = DecisionTree.trainClassifier(trainData, 2 , Map[Int,Int](), "gini", 4, 100)
 
