@@ -37,6 +37,6 @@ cvData.cache()
 testData.cache()
 
 # create model
-val model = DecisionTree.trainClassifier(trainData, 2 , Map[Int,Int](), "gini", 4, 100)
+val model = DecisionTree.trainClassifier(train, 2 , Map[Int,Int](), "gini", 4, 100)
 
 ```
