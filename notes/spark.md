@@ -2,7 +2,7 @@
 scala> :h?   # history
 
 ```
-## Пример дерева решений
+## Пример классификации (дерева решений)
 
 ```python
 import org.apache.spark.mllib.evaluation.MulticlassMetrics
@@ -53,3 +53,17 @@ metrics.confusionMatrix
 metrics.accuracy
 
 ```
+
+## Пример регрессии
+
+```python
+
+# load data
+val price = sc.textFile("/Users/tesemnikov-av/Downloads/kc_house_data.csv")
+
+# header
+def isHeader(line: String): Boolean = line.contains("id")
+val no_header = price.filter(!isHeader(_))
+
+
+
