@@ -36,7 +36,20 @@ trainData.cache()
 cvData.cache()
 testData.cache()
 
-# create model
+# create and fit model
 val model = DecisionTree.trainClassifier(train, 2 , Map[Int,Int](), "gini", 4, 100)
+
+# prediction
+val predictionsAndLabels = test.map(example =>
+    (model.predict(example.features), example.label)
+)
+
+# metrics
+val metrics = new MulticlassMetrics(predictionsAndLabels)
+
+metrics.recall(0)
+metrics.precision(0)
+metrics.confusionMatrix
+metrics.accuracy
 
 ```
