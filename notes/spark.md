@@ -5,6 +5,11 @@ scala> :h?   # history
 ## Пример дерева решений
 
 ```python
+import org.apache.spark.mllib.evaluation.MulticlassMetrics
+import org.apache.spark.mllib.tree.model.DecisionTreeModel
+import org.apache.spark.mllib.linalg.Vector
+import org.apache.spark.mllib.regression.LabeledPoint
+
 # load data
 val heart = sc.textFile("/Users/tesemnikov-av/Downloads/heart.csv")
 
