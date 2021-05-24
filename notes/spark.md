@@ -11,17 +11,17 @@ import org.apache.spark.mllib.tree.DecisionTree
 import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.regression.LabeledPoint
 
-# load data
+// load data
 val heart = sc.textFile("/Users/tesemnikov-av/Downloads/heart.csv")
 
-# show 4 exapmle
+// show 4 exapmle
 heart.take(4).foreach(println)
 
-# filter header
+// filter header
 def isHeader(line: String): Boolean = line.contains("age")
 val no_header = heart.filter(!isHeader(_))
 
-# LabeledPoint
+// LabeledPoint
 val data = no_header.map { line => 
 val values = line.split(',').map(_.toDouble)
 val featureVector = Vectors.dense(values.init)
@@ -29,23 +29,23 @@ val label = values.last
 LabeledPoint(label, featureVector)
 }
 
-# train test val split
+// train test val split
 val Array(trainData, cvData, testData) = data.randomSplit(Array(0.8, 0.1, 0.1))
 
-# cache
+// cache
 trainData.cache()
 cvData.cache()
 testData.cache()
 
-# create and fit model
+// create and fit model
 val model = DecisionTree.trainClassifier(train, 2 , Map[Int,Int](), "gini", 4, 100)
 
-# prediction
+// prediction
 val predictionsAndLabels = test.map(example =>
     (model.predict(example.features), example.label)
 )
 
-# metrics
+// metrics
 val metrics = new MulticlassMetrics(predictionsAndLabels)
 
 metrics.recall(0)
@@ -58,11 +58,16 @@ metrics.accuracy
 ## Пример регрессии
 
 ```scala
+import org.apache.spark.mllib.tree.configuration.BoostingStrategy
+import org.apache.spark.mllib.tree.GradientBoostedTrees
+import org.apache.spark.mllib.regression.LabeledPoint
+import org.apache.spark.mllib.evaluation.RegressionMetrics
+import org.apache.spark.mllib.linalg.Vectors
 
-# load data
+// load data
 val price = sc.textFile("/Users/tesemnikov-av/Downloads/kc_house_data.csv")
 
-# header
+// header
 def isHeader(line: String): Boolean = line.contains("id")
 val no_header = price.filter(!isHeader(_))
 
@@ -71,16 +76,34 @@ def toDouble(s: String) = {
     if ("?".equals(tmp)) Double.NaN else tmp.toDouble
 }
 
+// case class HouseData(id1: String, id2: String, 
+//    features:Array[Double],price: Int)
+
 def parse(line: String) = {
     val pieces = line.split(',')
     val id1 = pieces(0) replaceAll ("\"", "")
     val id2 = pieces(1).toString
     val price = pieces(2).toInt
-    val param = pieces.slice(3, 20).map(toDouble) 
+    val features = Vectors.dense(pieces.slice(3, 20).map(toDouble) ) 
     
-    (id1, id2, param, price)
+    LabeledPoint(price, features)
 }
 
-parse(no_header.first)
+val data = no_header.map(line => parse(line))
+val Array(trainData, testData) = data.randomSplit(Array(0.7, 0.3))
 
+val boostingStrategy = BoostingStrategy.defaultParams("Regression")
+boostingStrategy.numIterations = 50
+boostingStrategy.treeStrategy.maxDepth = 5
+boostingStrategy.treeStrategy.categoricalFeaturesInfo = Map[Int, Int]()
 
+val model = GradientBoostedTrees.train(trainData, boostingStrategy)
+
+val labelsAndPredictions = testData.map { point =>
+  val prediction = model.predict(point.features)
+  (point.label, prediction)
+}
+
+val regressionMetrics = new RegressionMetrics(labelsAndPredictions)
+
+println(s"RMSE = ${regressionMetrics.rootMeanSquaredError}")
