@@ -5,6 +5,9 @@ scala> 'b' :: res1 # добавить b в массив res
 ```
 ## Пример классификации (дерева решений)
 
+
+![image](https://storage.googleapis.com/kaggle-datasets-images/33180/43520/718447d8c4f7e29f129c25b44b324efa/dataset-card.jpg?t=2018-06-25-11-44-45)
+
 ```scala
 import org.apache.spark.mllib.evaluation.MulticlassMetrics
 import org.apache.spark.mllib.tree.DecisionTree
