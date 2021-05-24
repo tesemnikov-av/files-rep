@@ -110,7 +110,7 @@ mean(mae_raw)
 
 // val regressionMetrics = new RegressionMetrics(labelsAndPredictions)
 // println(s"RMSE = ${regressionMetrics.rootMeanSquaredError}")
-
+```
 
 ```scala
 scala> :h?   # history
