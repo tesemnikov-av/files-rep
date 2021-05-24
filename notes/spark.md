@@ -104,6 +104,11 @@ val labelsAndPredictions = testData.map { point =>
   (point.label, prediction)
 }
 
-val regressionMetrics = new RegressionMetrics(labelsAndPredictions)
+val mae_raw = labelsAndPredictions.take(10).map{ case(v, p) => (v - p).round.abs.toDouble }
 
-println(s"RMSE = ${regressionMetrics.rootMeanSquaredError}")
+def mean(xs: Iterable[Double]) = xs.sum / xs.size
+
+mean(mae_raw)
+
+// val regressionMetrics = new RegressionMetrics(labelsAndPredictions)
+// println(s"RMSE = ${regressionMetrics.rootMeanSquaredError}")
