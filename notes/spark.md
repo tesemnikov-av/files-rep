@@ -66,11 +66,19 @@ val price = sc.textFile("/Users/tesemnikov-av/Downloads/kc_house_data.csv")
 def isHeader(line: String): Boolean = line.contains("id")
 val no_header = price.filter(!isHeader(_))
 
+def toDouble(s: String) = {
+    val tmp = s replaceAll ("\"", "")
+    if ("?".equals(tmp)) Double.NaN else tmp.toDouble
+}
+
 def parse(line: String) = {
     val pieces = line.split(',')
     val id1 = pieces(0) replaceAll ("\"", "")
     val id2 = pieces(1).toString
-    (id1, id2)
+    val price = pieces(2).toInt
+    val param = pieces.slice(3, 20).map(toDouble) 
+    
+    (id1, id2, param, price)
 }
 
 parse(no_header.first)
