@@ -5,7 +5,7 @@ scala> 'b' :: res1 # добавить b в массив res
 ```
 ## Пример классификации (дерева решений)
 
-```python
+```scala
 import org.apache.spark.mllib.evaluation.MulticlassMetrics
 import org.apache.spark.mllib.tree.DecisionTree
 import org.apache.spark.mllib.linalg.Vectors
@@ -57,7 +57,7 @@ metrics.accuracy
 
 ## Пример регрессии
 
-```python
+```scala
 
 # load data
 val price = sc.textFile("/Users/tesemnikov-av/Downloads/kc_house_data.csv")
