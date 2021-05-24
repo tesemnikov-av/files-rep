@@ -59,6 +59,7 @@ metrics.accuracy
 ```
 
 ## Пример регрессии
+![image](https://storage.googleapis.com/kaggle-competitions/kaggle/5407/media/housesbanner.png)
 
 ```scala
 import org.apache.spark.mllib.tree.configuration.BoostingStrategy
