@@ -3,7 +3,7 @@ scala> :h?   # history
 scala> 'b' :: res1 # добавить b в массив res
 
 ```
-## Пример классификации (дерева решений)
+## Heart Disease UCI (Дерево решений)
 
 
 ![image](https://lh3.googleusercontent.com/proxy/i34MRnSxkBKPVrJQr6yHZ3S5ThkOHPIvFyJyZMYqBsAV1z4pOQbGASYe3-l8ITFU1075PLgjxP8vjrJZIqQwqlW9QbJXez8LT9WKw5IQpf0bHDqEqacIfwa1DGRMQdP0QC5daIRnm-ozeCh6ZSgBJKM7l1Y-lDkYVUa-QtQvcdNJiDNExlDlWh9NxstH_SxLfY_e8bPQ4_ogSpNmjOQxziklBjEJq6XCqw)
