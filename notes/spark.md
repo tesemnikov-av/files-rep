@@ -58,7 +58,7 @@ metrics.accuracy
 
 ```
 
-## Пример регрессии
+## House Prices - Advanced Regression Techniques (Пример регрессии)
 ![image](https://storage.googleapis.com/kaggle-competitions/kaggle/5407/media/housesbanner.png)
 
 ```scala
