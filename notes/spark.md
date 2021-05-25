@@ -136,5 +136,11 @@ df.filter(df("age") > 21).show()
 
 // Select everybody, but increment the age by 1
 df.select(df("sex"), df("age") + 1).show()
+
+// Register df as a table "heart".
+df.createOrReplaceTempView("heart")
+
+val older_70_sex = spark.sql("SELECT sex FROM heart where age > 70")
+
 ```
 
