@@ -119,7 +119,22 @@ scala> 'b' :: res1 # добавить b в массив res
 
 ## DataFrame & DataSet
 ```scala
+// Create the DataFrame
 val df = spark.read.format("csv").option("header", "true").load("/Users/tesemnikov-av/Downloads/heart.csv")
 
+// Print the schema in a tree format
+df.printSchema()
+
+// Select column 
+df.select("age").show()
+
+// Group By
+df.groupBy("age").count().show()
+
+// Filter
+df.filter(df("age") > 21).show()
+
+// Select everybody, but increment the age by 1
+df.select(df("sex"), df("age") + 1).show()
 ```
 
