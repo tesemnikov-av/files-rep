@@ -116,3 +116,10 @@ mean(mae_raw)
 scala> :h?   # history
 scala> 'b' :: res1 # добавить b в массив res
 ```
+
+## DataFrame & DataSet
+```scala
+val df = spark.read.format("csv").option("header", "true").load("/Users/tesemnikov-av/Downloads/heart.csv")
+
+```
+
