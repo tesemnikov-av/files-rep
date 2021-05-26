@@ -1,4 +1,4 @@
-## Heart Disease UCI (Дерево решений)
+## Heart Disease UCI (Пример классификации: Дерево решений)
 
 ![image](https://lh3.googleusercontent.com/proxy/OInVpEFiQJ3PkjyFVcUXeDdPk19ieTVWIlBM486BU4rTpOeLhgvqKgGrkmEIA05ccLxWXHtfspvPg_FoNJ-fvUrtPHQdUiF4-61Bctlrj8G8SMt6bTDHeFhYYp3nyTpfaKSalLpc0r61MhexebfPttuYrQiuK_3XZoD9D-05v528_xQ9vVygy5XNYWbdoO26mBQVs9dZv7TRJaUg3Aon-f47xLKD7TukXw)
 
