@@ -1,6 +1,6 @@
 ## Heart Disease UCI (Пример классификации: Дерево решений)
 
-![image](https://lh3.googleusercontent.com/proxy/OInVpEFiQJ3PkjyFVcUXeDdPk19ieTVWIlBM486BU4rTpOeLhgvqKgGrkmEIA05ccLxWXHtfspvPg_FoNJ-fvUrtPHQdUiF4-61Bctlrj8G8SMt6bTDHeFhYYp3nyTpfaKSalLpc0r61MhexebfPttuYrQiuK_3XZoD9D-05v528_xQ9vVygy5XNYWbdoO26mBQVs9dZv7TRJaUg3Aon-f47xLKD7TukXw)
+![image](https://miro.medium.com/max/3200/1*3UDYyZDhH0dWvbrLem0g5Q.jpeg)
 
 ```scala
 import org.apache.spark.mllib.evaluation.MulticlassMetrics
