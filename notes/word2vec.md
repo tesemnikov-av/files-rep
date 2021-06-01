@@ -1,3 +1,4 @@
+```python
 import gensim.downloader as api
 model = api.load("word2vec-ruscorpora-300")
 
@@ -16,3 +17,4 @@ for n in model.most_similar(positive=[u'пожар_NOUN']):
 сгорать::дотла_VERB 0.547737360001
 поджигать_VERB 0.534844279289
 незатушить_VERB 0.534272968769
+```
