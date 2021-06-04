@@ -17,4 +17,12 @@ for n in model.most_similar(positive=[u'пожар_NOUN']):
 сгорать::дотла_VERB 0.547737360001
 поджигать_VERB 0.534844279289
 незатушить_VERB 0.534272968769
+
+# Лишнее слово
+print(model.doesnt_match('яблоко_NOUN груша_NOUN виноград_NOUN банан_NOUN лимон_NOUN картофель_NOUN'.split()))
+# > картофель_NOUN
+
+print(model.most_similar(positive=['пицца_NOUN', 'россия_NOUN'], negative=['италия_NOUN'])[0][0])
+# пельмень_NOUN
+
 ```
